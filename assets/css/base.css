@@ -4,6 +4,7 @@
     --black-color : #000;
     --text-color : #333;
     --border-color : #dbdbdb;
+    --star-gold-color: #ffce3d;
 
     --header-height: 120px;
     --navbar-height: 24px;
@@ -161,6 +162,7 @@ html {
 } 
 
 .select-input__list {
+    z-index: 1;
     position: absolute;
     left: 0;
     right: 0;
@@ -184,80 +186,37 @@ html {
     color: var(--primary-color);
 }
 
-/* Product-item */
-.home-product-item {
-    margin-top: 10px;
-    background-color: var(--white-color);
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 }
 
-.home-product-item__img {
-    padding-top: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
+.pagination-item {
+    margin: 0 16px;
 }
 
-.home-product-item__name {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--text-color);
-    line-height: 1.8rem;
-    height: 3.6rem;
-    margin: 10px;
-    overflow: hidden;
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    cursor: pointer;
+    background-color: #fb6445;
+}
+
+.pagination-item__link {
+    --height: 30px;
     display: block;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    text-align: center;
+    line-height: var(--height);
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.4);
+    min-width: 40px;
+    height: var(--height);
 }
 
-.home-product-item__price {
-
-}
-
-.home-product-item__price-old {
-
-}
-
-.home-product-item__price-current {
-
-}
-
-.home-product-item__action {
-
-}
-
-.home-product-item__like {
-
-}
-
-.home-product-item__rating {
-
-}
-
-.home-product-item__origin {
-
-}
-
-.home-product-item__brand {
-
-}
-
-.home-product-item__origin-name {
-
-}
-
-.home-product-item__favourite {
-
-}
-
-.home-product-item__sale-off {
-
-}
-
-.home-product-item__sale-off-percent {
-
-}
-
-.home-product-item__sale-off-label {
-
-}
+/* Footer */
